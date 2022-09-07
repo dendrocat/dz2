@@ -73,9 +73,9 @@ void dz25() {
 int main() {
     setlocale(LC_ALL, "RUSSIAN");
     dz21();
-    //dz22();
-    //dz23();
-    //dz24();
-    //dz25();
+    dz22();
+    dz23();
+    dz24();
+    dz25();
  }
 
