@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <math.h>
 #include <iomanip>
 using namespace std;
@@ -8,7 +8,7 @@ void dz21() {
     cout << "Введите высоту, радиус верхнего и нижнего оснований и образующую усечённого конуса(h, r, R, l): ";
     double h, r, R, pi, l;
     cin >> h >> r >> R >> l;
-    if (h != 0 && r != 0 && R != 0 && l != 0 && r != R && ((l * l - h * h) < R * R || (l * l - h * h) < r * r)) {
+    if (h > 0 && r > 0 && R > 0 && l > 0 && r != R && l > h) {
         pi = acos(-1.0);
         cout << pi;
         cout << "Объём равен " << (R * R + R * r + r * r) * pi * h / 3 << endl;
@@ -59,6 +59,7 @@ void dz24() {
 }
 
 void dz25() {
+    cout << "Таблица функции" << endl;
     cout << setw(5) << "x" << setw(9) << "y" << endl;
     for (float x = -4; x <= 4; x+=0.5) {
         if (x != 1) {
@@ -78,4 +79,3 @@ int main() {
     dz24();
     dz25();
  }
-
