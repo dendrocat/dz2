@@ -5,10 +5,11 @@ using namespace std;
 
 
 void dz21() {
-    cout << "Введите высоту, радиус верхнего и нижнего оснований и образующую усечённого конуса(h, r, R, l): ";
+    cout << "Введите высоту, радиус верхнего и нижнего оснований усечённого конуса(h, r, R): ";
     double h, r, R, pi, l;
     cin >> h >> r >> R >> l;
-    if (h > 0 && r > 0 && R > 0 && l > 0 && r != R && l > h) {
+    l = sqrt(h*h + (R - r)*(R - r));
+    if (h > 0 && r > 0 && R > 0 && l > 0 && r != R) {
         pi = acos(-1.0);
         cout << pi;
         cout << "Объём равен " << (R * R + R * r + r * r) * pi * h / 3 << endl;
@@ -52,8 +53,13 @@ void dz24() {
     cout << "Введите натуральное число N: ";
     int N;
     cin >> N;
-    for (int i = 0; i < 10; i++) {
-        cout << N + i << " ";
+    if N <= 0 {
+        for (int i = 1; i <= 10; i++) {
+            cout << i << " ";
+        }
+    else {
+        for (int i = 0; i < 10; i++) {
+            cout << N + i << " ";
     }
     cout << endl;
 }
